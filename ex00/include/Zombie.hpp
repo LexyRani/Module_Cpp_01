@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/16 18:41:59 by aceralin          #+#    #+#             */
+/*   Updated: 2024/01/18 16:53:49 by aceralin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
+#include <iostream>
+
+//COLOR
+#define MAGENTA "\033[95m"
+#define WHITE "\033[37m"
+#define GREY  "\033[90m"
+#define RED  "\033[91m"
+#define DRED  "\033[31m"
+#define GREEN  "\033[92m"
+#define DGREEN  "\033[32m"
+#define YELLOW  "\033[93m"
+#define DYELLOW  "\033[33m"
+#define BLUE "\033[94m"
+#define DBLUE  "\033[34m"
+#define DMAGENTA  "\033[35m"
+#define CYAN  "\033[96m"
+#define DCYAN  "\033[36m"
+#define RESET "\033[0m"
+
+// FORMAT
+#define BOLD  "\033[1m"
+#define ITALIC  "\033[3m"
+#define UNDERLINE  "\033[4m"
+#define STRIKETHROUGH  "\033[9m"
+class Zombie
+{
+    private:
+        std::string _name;
+    
+    public:
+        Zombie(std::string name);
+        void announce(void);
+        ~Zombie(void);
+
+    
+};
+
+Zombie *newZombie(std::string name );
+
+#endif
