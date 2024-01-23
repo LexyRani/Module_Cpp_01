@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 18:41:59 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/23 16:31:09 by aceralin         ###   ########.fr       */
+/*   Created: 2024/01/23 17:31:18 by aceralin          #+#    #+#             */
+/*   Updated: 2024/01/23 19:30:27 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
@@ -42,13 +43,13 @@ class Zombie
 {
     private:
         std::string _name;
-    
     public:
-        Zombie(std::string name);
+        Zombie(void);
+        Zombie(const std::string name);
         ~Zombie(void);
+        std::string getName(void);
+        void setName(std::string name);
         void announce(void);
 };
-
-Zombie *newZombie(std::string name);
 
 #endif
