@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:30:53 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/23 20:00:06 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:05:12 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ Zombie* zombieHorde( int N, std::string name );
 
 int main(void)
 {
-    Zombie *zombies = zombieHorde(4, "Blop");
+    Zombie *zombies = zombieHorde(7, "Blop");
     delete []zombies;
+    return(0);
 }
