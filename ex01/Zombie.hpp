@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:31:18 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/24 17:26:21 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:57:56 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,14 @@ class Zombie
 {
     private:
         std::string _name;
+        
     public:
         Zombie(void);
         Zombie(const std::string name);
         ~Zombie(void);
+        void announce(void);
         std::string getName(void);
         void setName(std::string name);
-        void announce(void);
 };
 
 #endif
