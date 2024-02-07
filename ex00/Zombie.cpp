@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:18:15 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/23 17:13:33 by aceralin         ###   ########.fr       */
+/*   Created: 2024/01/16 18:47:32 by aceralin          #+#    #+#             */
+/*   Updated: 2024/02/07 20:27:54 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
-// cree un Zombie et lui donne un nom en le stockant sur la heap grace a new
-Zombie *newZombie(std::string name )
+//Fonction Membre
+void Zombie::announce()
 {
-    return(new Zombie(name));
+    std::cout<< this->_name <<": BraiiiiiiinnnzzzZ..."<<std::endl;
+}
+
+//Constructeur par default
+Zombie::Zombie()
+{
+    
+}
+
+//Constructeur par parametres
+Zombie::Zombie(std::string name): _name(name)
+{
+    
+}
+
+//destructeur
+Zombie::~Zombie(void)
+{
+    std::cout<<this->_name <<" : MyClass was destroyed"<<std::endl;
 }
 

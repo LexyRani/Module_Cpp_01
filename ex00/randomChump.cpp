@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 18:47:32 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/23 17:10:32 by aceralin         ###   ########.fr       */
+/*   Created: 2024/01/16 19:21:31 by aceralin          #+#    #+#             */
+/*   Updated: 2024/02/07 20:33:58 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::announce()
-{
-    std::cout<< this->_name <<": BraiiiiiiinnnzzzZ..."<<std::endl;
-}
+//cree un Zombie et lui donne un nom en le stockant sur la stack et le fait se presenter
+//on appelle l'objet utilisant le constructeur par paramettre
 
-Zombie::Zombie(std::string name): _name(name)
+void randomChump( std::string name )
 {
-    
+    Zombie  zombie_new(name);
+    zombie_new.announce();
 }
-
-Zombie::~Zombie(void)
-{
-    std::cout<<this->_name <<" : MyClass was destroyed"<<std::endl;
-}
-

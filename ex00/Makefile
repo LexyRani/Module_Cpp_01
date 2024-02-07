@@ -6,9 +6,10 @@
 #    By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 18:36:10 by aceralin          #+#    #+#              #
-#    Updated: 2024/01/23 16:19:07 by aceralin         ###   ########.fr        #
+#    Updated: 2024/02/02 15:44:09 by aceralin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                           COMPILER, NORMS AND FLAGS                          #      
@@ -16,27 +17,28 @@
 NAME			= Zombie
 CXX				= c++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                                 FILES PATHS                                  #      
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 ##SOURCES##
-SRCS_PATH       = source/
-SRCS_FILES		= main newZombie randomChump Zombie
-SRCS            = $(addsuffix .cpp, $(addprefix $(SRCS_PATH), $(SRCS_FILES)))
+
+SRCS_FILES		= main Zombie newZombie randomChump
+SRCS            = $(addsuffix .cpp, $(SRCS_FILES))
 
 #HEADERS##
-HEADERS_PATH    = include/
-HEADERS_FILES   = Zombie
-HEADERS			= $(addsuffix .hpp, $(addprefix $(HEADERS_PATH), $(HEADERS_FILES)))
-HEADERS_INC		= $(addprefix -I, $(HEADERS_PATH))
 
-##OBJECTS##					
-OBJS_PATH		= obj/
+HEADERS_FILES   = Zombie
+HEADERS			= $(addsuffix .hpp, $(HEADERS_FILES))
+HEADERS_INC		= -I
+
+##OBJECTS##	
+				
+OBJS_PATH		= objs/
 OBJS_NAMES		= $(SRCS:.cpp=.o)
-OBJS_FOLDER     = $(addprefix $(OBJS_PATH), $(SRCS_PATH))
+#OBJS_FOLDER     = $(addprefix $(OBJS_PATH), $(SRCS))
 OBJS            = $(addprefix $(OBJS_PATH), $(OBJS_NAMES))
 
 ##DEPANDANCES##
@@ -54,7 +56,7 @@ $(NAME):  $(HEADERS) $(OBJS)
 		@$(CXX) $(CXXFLAGS) $(HEADERS_INC) $(OBJS) -o $(NAME)
 
 $(OBJS_PATH)%.o: %.cpp 
-	@mkdir -p $(@D) $(OBJS_FOLDER)
+	@mkdir -p $(@D) $(OBJS_PATH)
 	$(CXX) $(CXXFLAGS) $(HEADERS_INC) -MMD -MP -o $@ -c $<
 	@printf "$(YELLOW). . . compiling $(NAME) objects . . . $(ITALIC)$(GREY)%-33.33s\r$(RESET)" $@
 
@@ -81,6 +83,8 @@ re:	fclean all
 
 -include ${DEPS}
 .PHONY:			all clean fclean re 
+
+
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                                CUSTOM RULES                                  #      
