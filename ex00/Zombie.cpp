@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:47:32 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/07 20:27:54 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/09 17:29:23 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ Zombie::Zombie()
 Zombie::Zombie(std::string name): _name(name)
 {
     
+}
+
+std::string Zombie::getName(void)
+{
+    return(this->_name);
+}
+
+void    Zombie::setName(std::string name)
+{
+    this->_name = name;
 }
 
 //destructeur
