@@ -6,15 +6,15 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:13:39 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/24 20:16:00 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:06:44 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_H
 #define WEAPON_H
 #include <iostream>
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+// #include "HumanA.hpp"
+// #include "HumanB.hpp"
 
 
 //COLOR
@@ -44,13 +44,13 @@
 class Weapon
 {
     private:
-        std::string _type;    
+         std::string  _type;    
     public:
         Weapon();
-        Weapon(std::string& type);
+        Weapon(std::string type);
         ~Weapon(void);
         const std::string getType(void)const;
-        void setType(const std::string type);
+        void setType(std::string type);
 };
 
 #endif

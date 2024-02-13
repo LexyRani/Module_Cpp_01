@@ -6,14 +6,14 @@
 #    By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 19:03:13 by aceralin          #+#    #+#              #
-#    Updated: 2024/01/24 19:04:39 by aceralin         ###   ########.fr        #
+#    Updated: 2024/02/13 20:45:58 by aceralin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                           COMPILER, NORMS AND FLAGS                          #      
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-NAME			= ZombieHorde
+NAME			= Attack
 CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
@@ -24,12 +24,12 @@ CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
 
 ##SOURCES##
 
-SRCS_FILES		= main zombieHorde Zombie
+SRCS_FILES		= main Weapon HumanA HumanB
 SRCS            = $(addsuffix .cpp, $(SRCS_FILES))
 
 #HEADERS##
 
-HEADERS_FILES   = Zombie
+HEADERS_FILES   = Weapon HumanA HumanB
 HEADERS			= $(addsuffix .hpp, $(HEADERS_FILES))
 HEADERS_INC		= -I
 

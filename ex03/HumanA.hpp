@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:23:26 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/24 20:41:15 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 19:47:51 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #define HUMANA_H
 #include <iostream>
 #include "Weapon.hpp"
-#include "HumanB.hpp"
+// #include "HumanB.hpp"
 
 //COLOR
 #define MAGENTA "\033[95m"
@@ -44,13 +44,15 @@
 class HumanA
 {
     private:
-        Weapon _type;
-        Weapon _name; 
+        std::string _name;
+        Weapon &_weapon;
     public:
         HumanA(void);
-        HumanA(Weapon weapon);
+        HumanA(std::string name, Weapon &weapon);
         ~HumanA(void);
-        void attack()const;
+        // std::string getWeapon(void);
+        // void setWeapon(std::string weapon);
+        void attack(void)const;
 };
 
 

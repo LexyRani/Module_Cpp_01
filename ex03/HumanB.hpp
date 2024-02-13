@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:23:33 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/24 20:23:44 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:06:15 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,16 @@
 class HumanB
 {
     private:
-        Weapon _type;
-        Weapon _name;
+        std::string _name;
+        Weapon* _weapon;
     
     public:
         HumanB(void);
-        HumanB(Weapon weapon);
+        HumanB(std::string name);
         ~HumanB(void);
         void attack(void);
+        void setWeapon(Weapon& weapon);
 };
-
 
 #endif
 
