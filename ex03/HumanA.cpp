@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:25:53 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/13 20:54:57 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:34:10 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ HumanA::~HumanA()
     
 }
 
-
-void HumanA::attack(void)const
+void HumanA::attack(void)
 {
     std::cout << this->_name << " attack with their " << this->_weapon.getType() << std::endl;
 }

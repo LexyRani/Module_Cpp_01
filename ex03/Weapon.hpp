@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:13:39 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/13 21:06:44 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:32:17 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ class Weapon
         Weapon();
         Weapon(std::string type);
         ~Weapon(void);
-        const std::string getType(void)const;
-        void setType(std::string type);
+        std::string getType(void);
+        void setType( std::string type);
 };
 
 #endif

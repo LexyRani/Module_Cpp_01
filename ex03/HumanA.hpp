@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:23:26 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/13 19:47:51 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:33:55 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,9 @@ class HumanA
         std::string _name;
         Weapon &_weapon;
     public:
-        HumanA(void);
         HumanA(std::string name, Weapon &weapon);
         ~HumanA(void);
-        // std::string getWeapon(void);
-        // void setWeapon(std::string weapon);
-        void attack(void)const;
+        void attack(void);
 };
-
 
 #endif
