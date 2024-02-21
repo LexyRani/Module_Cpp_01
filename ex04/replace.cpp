@@ -64,5 +64,5 @@ int    Replace::replaceFile()
 
 void    Replace::foundOccurence()
 {
-    for()
+    //for()
 }
