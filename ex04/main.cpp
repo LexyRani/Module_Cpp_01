@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
         }
         Replace replace = Replace(filename, argv[2], argv[3]);
         replace.fillBuffer();
+        replace.foundOccurence();
         if (replace.replaceFile() == 1)
             return (1);
         fd.close();

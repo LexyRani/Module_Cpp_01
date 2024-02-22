@@ -20,9 +20,9 @@ Replace::Replace(void)
 Replace::Replace(File& file, const char *s1, const char *s2): _s1(s1), _s2(s2)
 {
     _filename = file.getName();
-    std::cout<<"filename: "<< _filename<<std::endl;
+  //  std::cout<<"filename: "<< _filename<<std::endl;
     _destFileName = file.getName() + std::string(".replace");
-    std::cout<<"dest: " <<this->_destFileName<<std::endl;
+ //   std::cout<<"dest: " <<this->_destFileName<<std::endl;
 }
 
 Replace::~Replace()
@@ -32,20 +32,22 @@ Replace::~Replace()
 
 #include <string>
 #include <sstream>
+#include <fstream>
 
 void    Replace::fillBuffer()
 {
     std::ifstream file(_filename.c_str(), std::ifstream::in);
 
     std::string line;
-    while(file.eof() == false)
+    while(file.eof() == false && std::noskipws)
     {
         std::getline(file, line);
-        std::cout<< line <<std::endl;
-        std::cout<< std::endl;
+       // std::cout<< line <<std::endl;
+      //  std::cout<< std::endl;
         _bufferFile += line + "\n" ; 
     }
-   // std::cout<< "bufferfile: "<<_bufferFile<<std::endl;
+    //_bufferFile.erase(newline);
+    std::cout<< "bufferfile: "<<_bufferFile<<std::endl;
     file.close();
     
 }
@@ -59,10 +61,22 @@ int    Replace::replaceFile()
         std::cerr<<"Fail to open the new file"<<std::endl;
         return (1);
     }
+    newFile<<_bufferFile;
+    newFile.close();
     return(0);
 }
 
 void    Replace::foundOccurence()
 {
-    //for()
+    std::cout<<"------------------"<<std::endl;
+    std::cout<<_bufferFile<<std::endl;
+    std::cout<<"2------------------2"<<std::endl;
+    for(std::size_t found = _bufferFile.find(_s1, 0); found != std::string::npos; found = _bufferFile.find(_s1, found + strlen(_s2.c_str())))
+    {
+        _bufferFile.erase(found, strlen(_s2.c_str()));
+        _bufferFile.insert(found,_s2);
+    }
+    std::cout<<"------------------"<<std::endl;
+    std::cout<<_bufferFile<<std::endl;
 }
+

@@ -14,6 +14,8 @@
 #define REPLACE_HPP
 #include <fstream>
 #include <iostream>
+#include <sstream>
+#include <cstring>
 #include "File.hpp"
 
 #define MAGENTA "\033[95m"
