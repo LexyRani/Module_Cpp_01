@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                           COMPILER, NORMS AND FLAGS                          #      
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-NAME			= replace
+NAME			= Harl
 CXX				= c++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
@@ -12,12 +12,12 @@ CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
 
 ##SOURCES##
 
-SRCS_FILES		= main  File replace
+SRCS_FILES		= main  Harl
 SRCS            = $(addsuffix .cpp, $(SRCS_FILES))
 
 #HEADERS##
 
-HEADERS_FILES   = File replace
+HEADERS_FILES   = Harl
 HEADERS			= $(addsuffix .hpp, $(HEADERS_FILES))
 HEADERS_INC		= -I
 

@@ -6,44 +6,42 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:32:32 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/07 20:55:27 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/23 19:20:31 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-//Fonction Membre
 void Zombie::announce()
 {
-    std::cout<< this->_name <<": BraiiiiiiinnnzzzZ..."<<std::endl;
+    std::cout<< getName() <<": BraiiiiiiinnnzzzZ..."<<std::endl;
 }
 
-//Constructeur par default
 Zombie::Zombie(void)
 {
-
+    std::cout << "Default constructor has been called." << std::endl;
 }
 
-//Constructeur par parametre
 Zombie::Zombie(std::string name): _name(name)
 {
-    
+    if (name.empty())
+    {
+        std::cout << "Zombie has no name" << std::endl;
+        _name = "unknown";
+    }
 }
 
-//getter
 std::string Zombie::getName(void)
 {  
     return(this->_name);
 }
 
-//setter
 void Zombie::setName(std::string name)
 {
     this->_name = name;
 }
 
-//Destructeur
 Zombie::~Zombie(void)
 {
-    std::cout<<this->_name <<" : MyClass was destroyed" <<std::endl;
+    std::cout<<getName() <<" : MyClass was destroyed" <<std::endl;
 }

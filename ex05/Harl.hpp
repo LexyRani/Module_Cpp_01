@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:19:25 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/22 21:22:51 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:41:30 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 #include <iostream>
 #include <sstream>
 #include <cstring>
-#include "File.hpp"
 
 #define MAGENTA "\033[95m"
 #define WHITE "\033[37m"

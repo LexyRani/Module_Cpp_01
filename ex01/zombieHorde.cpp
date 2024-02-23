@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:39:00 by aceralin          #+#    #+#             */
-/*   Updated: 2024/01/23 19:41:25 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/23 19:19:04 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Zombie* zombieHorde( int N, std::string name )
     for (int i = 0; i < N; i++)
     {
         zombies[i].setName(name);
+        zombies[i].announce();
     }
     return zombies;
 }

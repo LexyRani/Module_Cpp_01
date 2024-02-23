@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:50:20 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/21 22:18:57 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:25:04 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     if (argc == 4)
     {
-        std::fstream fd;
+        std::ifstream fd;
         File filename = File(argv[1]);
         fd.open(argv[1], std::fstream::in | std::fstream::out);
         if (!fd.is_open())
