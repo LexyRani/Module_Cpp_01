@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 18:34:02 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/23 18:58:35 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:53:03 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 int main()
 {
     Harl    harl;
-    
-    //recuperer le level rentre dans l input
+    std::string input;    
+    do
+    {
+        std::cout <<BOLD << GREEN <<"Please enter a level: "<< RESET;
+        std::cin >>input;
+        harl.complain(input);
+    } while (input.compare("exit"));
     return(0);
 }

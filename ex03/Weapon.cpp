@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:03 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/23 19:26:03 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:23:45 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Weapon::Weapon()
 {
-    
+    std::cout << "Default constructor has been called." << std::endl;
 }
 
 Weapon::Weapon(std::string type) : _type(type)
-{
-
+{ 
+   std::cout << "Surcharge constructor has been called." << std::endl;
 }
 
 Weapon::~Weapon(void)
@@ -27,14 +27,13 @@ Weapon::~Weapon(void)
     
 }
 
-// std::string  Weapon::getType(void)
 std::string const &Weapon::getType(void) const
 {
-   return(this->_type); 
+   return(_type); 
 }
 
 void Weapon::setType(std::string type)
 {
-     this->_type = type;
+     _type = type;
 }
 
