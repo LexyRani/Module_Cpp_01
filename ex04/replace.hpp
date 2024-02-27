@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:32:05 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/21 22:01:05 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/27 21:29:31 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,9 @@ class Replace
         Replace();
         Replace(File& file, const char *s1, const char *s2);
         ~Replace();
-        void    fillBuffer(); //gerer les cas d erreurs
+        int    fillBuffer();
         int    replaceFile();
-        void    foundOccurence(void);
-  
-  
+        void   foundOccurence(void);
 };
 
 #endif

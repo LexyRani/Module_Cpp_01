@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:50:20 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/23 18:25:04 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/27 21:06:28 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,12 @@ int main(int argc, char *argv[])
     {
         std::ifstream fd;
         File filename = File(argv[1]);
-        fd.open(argv[1], std::fstream::in | std::fstream::out);
-        if (!fd.is_open())
-        {
-            std::cerr<< filename.getName() << ": No such a file or directory" <<std::endl;
-            return (1);
-        }
-        Replace replace = Replace(filename, argv[2], argv[3]);
-        replace.fillBuffer();
-        replace.foundOccurence();
-        if (replace.replaceFile() == 1)
+        Replace sed_new = Replace(filename, argv[2], argv[3]);
+        if (sed_new.replaceFile() == 1)
             return (1);
         fd.close();
     }
     else
-        std::cout<< BOLD << RED <<"Bad number of arguments, the correct format is: ./replace [filename] [s1] [s2]" << RESET <<std::endl;
+        std::cerr<< BOLD << RED <<"Bad number of arguments, the correct format is: ./replace [filename] [s1] [s2]" << RESET <<std::endl;
     return(0);
 }

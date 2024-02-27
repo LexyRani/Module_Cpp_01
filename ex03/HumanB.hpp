@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:23:33 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/13 21:06:15 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:00:49 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ class HumanB
     private:
         std::string _name;
         Weapon* _weapon;
-    
     public:
         HumanB(void);
         HumanB(std::string name);

@@ -30,7 +30,6 @@ class File
 {
     private:
         std::string _filename;
-
     public:
         File(void);
         File(std::string filename);

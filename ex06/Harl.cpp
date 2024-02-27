@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 18:01:27 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/25 18:01:28 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/27 17:03:48 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,40 @@ Harl::~Harl(void)
 
 void Harl::complain(std::string level)
 {
-    (void)level;
     ptrFtHarl ptrFtHarl[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     for (size_t i = 0; i < 4; i += 1)
     {
+        //std::cout<<BOLD<< RED<<"ICI"<<RESET<<std::endl; 
 		if (level == levels[i])
         {
-			(this->*ptrFtHarl[i])();
+            switch(i)
+            {
+                case 0:
+                    (this->*ptrFtHarl[0])();
+                    (this->*ptrFtHarl[1])();
+                    (this->*ptrFtHarl[2])();
+                    (this->*ptrFtHarl[3])();
+                    break;
+                case 1:
+                    (this->*ptrFtHarl[1])();
+                    (this->*ptrFtHarl[2])();
+                    (this->*ptrFtHarl[3])();
+                    break;
+                case 2:
+                    (this->*ptrFtHarl[2])();
+                    (this->*ptrFtHarl[3])();
+                    break;
+                case 3:
+                    (this->*ptrFtHarl[3])();
+                    break;
+                default:
+                    break;
+            }
             return;
         }
     }
-    std::cout<<"The input you entered does not match"<<std::endl;   
+    std::cout<<YELLOW<<"[ Probably complaining about insignificant problems ]"<<std::endl; 		  
 }
 
 void Harl::debug(void)

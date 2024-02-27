@@ -6,7 +6,7 @@
 #    By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 18:36:10 by aceralin          #+#    #+#              #
-#    Updated: 2024/02/02 15:44:09 by aceralin         ###   ########.fr        #
+#    Updated: 2024/02/27 17:30:22 by aceralin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,6 @@ HEADERS_INC		= -I
 				
 OBJS_PATH		= objs/
 OBJS_NAMES		= $(SRCS:.cpp=.o)
-#OBJS_FOLDER     = $(addprefix $(OBJS_PATH), $(SRCS))
 OBJS            = $(addprefix $(OBJS_PATH), $(OBJS_NAMES))
 
 ##DEPANDANCES##
@@ -68,7 +67,6 @@ ifeq ("$(shell test -d $(OBJS_PATH) && echo $$?)","0")
 else	
 	@echo "$(BLUE)\n* * NO OBJECTS TO CLEAN * *\n$(RESET)"
 endif
-#@${RM} $(OBJ_PATH) ${DEPS}
 
 fclean:	clean
 ifeq ("$(shell test -e $(NAME) && echo $$?)","0")

@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:02:24 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/14 17:24:05 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:27:59 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ File::~File(void)
 
 std::string File::getName(void)
 {
-    return(this->_filename);
+    return(_filename);
 }
