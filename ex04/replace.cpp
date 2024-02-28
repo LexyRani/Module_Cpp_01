@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:32:08 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/27 21:29:13 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/28 19:16:48 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,15 @@ int    Replace::fillBuffer()
     while (file.eof() == false)
     {
         std::getline(file, line);
-        _bufferFile += line + "\n" ; 
+        if (file.eof() == true)
+        {
+            _bufferFile +=line;
+           // break;
+        }
+        else
+            _bufferFile += line + "\n";
     }
+    //std::cout<<_bufferFile<<std::endl;
     file.close();
     return (0);
 }
@@ -53,7 +60,7 @@ void    Replace::foundOccurence()
 {
     for(std::size_t found = _bufferFile.find(_s1, 0); found != std::string::npos; found = _bufferFile.find(_s1, found + strlen(_s2.c_str())))
     {
-        _bufferFile.erase(found, strlen(_s2.c_str()) -1);
+        _bufferFile.erase(found, strlen(_s1.c_str()));
         _bufferFile.insert(found, _s2);
     }
 }

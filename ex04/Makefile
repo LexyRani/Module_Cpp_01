@@ -6,7 +6,7 @@
 #    By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 21:44:27 by aceralin          #+#    #+#              #
-#    Updated: 2024/02/22 21:13:10 by aceralin         ###   ########.fr        #
+#    Updated: 2024/02/28 20:26:44 by aceralin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 NAME			= replace
 CXX				= c++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I
+CXXFLAGS		= -Wall -Wextra -Werror -std=c++98 -I 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                                 FILES PATHS                                  #      

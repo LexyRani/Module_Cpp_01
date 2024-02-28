@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:19:28 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/25 17:42:45 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/28 17:24:06 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Harl::~Harl(void)
 
 void Harl::complain(std::string level)
 {
-    (void)level;
     ptrFtHarl ptrFtHarl[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     for (size_t i = 0; i < 4; i += 1)

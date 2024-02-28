@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 18:01:27 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/27 17:03:48 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/28 17:25:02 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void Harl::complain(std::string level)
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     for (size_t i = 0; i < 4; i += 1)
     {
-        //std::cout<<BOLD<< RED<<"ICI"<<RESET<<std::endl; 
 		if (level == levels[i])
         {
             switch(i)
