@@ -6,7 +6,7 @@
 /*   By: aceralin <aceralin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:03 by aceralin          #+#    #+#             */
-/*   Updated: 2024/02/27 19:12:30 by aceralin         ###   ########.fr       */
+/*   Updated: 2024/02/28 20:41:46 by aceralin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 Weapon::Weapon()
 {
    std::cout <<BOLD<<BLUE<<"Default Weapon constructor  has been called."<< RESET<< std::endl;
+   _type = "unknown weapon";
 }
 
 Weapon::Weapon(std::string type) : _type(type)
 { 
    std::cout <<BOLD<<YELLOW<<"Surcharge Weapon constructor has been called." <<RESET<<std::endl;
+   if (_type.empty())
+     _type = "unknown weapon";
 }
 
 Weapon::~Weapon(void)
